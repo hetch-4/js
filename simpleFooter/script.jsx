@@ -13,7 +13,7 @@ export const Footer = () => {
           <li>Privacy Policy</li>
           <li>Terms and Conditions</li>
         </ul>
-        <p>&copy;Fitness Dashboard. All rights reserved.</p>
+        <p> &copy;Fitness Dashboard. All rights reserved.</p>
         <a href="#">Home</a>
         <a href="#">About us</a>
         <a href="#">Contact us</a>
