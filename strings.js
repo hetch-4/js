@@ -43,3 +43,8 @@ console.log(greet);
 console.log(greet.trim());
 console.log(greet.trimEnd());
 console.log(greet.trimStart());
+
+//prompt() used to get info from user in form of a dialog box
+let answer = window.prompt("What's your favourite animal");
+
+console.log(answer);
