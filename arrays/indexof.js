@@ -12,3 +12,5 @@ console.log(index) // -1
 let colors = ['red', 'green', 'blue', 'yellow', 'green'];
 index = colors.indexOf('green', 3);//starting index is 3 hence next 'green' of index 4 is returned
 console.log(index); //4
+console.log(colors.indexOf('blue'));
+
