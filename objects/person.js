@@ -1,3 +1,4 @@
+//object is a data structure that allows you to store related data and funtionality
 const person = {
   name: 'Alice',
   age: 30,
