@@ -21,7 +21,13 @@
     listsItem.textContent = "Cookies";
     dessertsList.appendChild(listsItem);
 
-    
+    let item = document.createElement("li");
+    item.textContent = "Milk";
+    dessertsList.appendChild(item);
+
+    const section = document.querySelector("#desserts li:last-of-type");
+
+    dessertsList.removeChild(section)
 
   </script>
 </body>
