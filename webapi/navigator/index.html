@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        
+
+    </div>
+
+    <script>
+        const item = document.createElement("p");
+        item.textContent = "Machine: "+navigator.userAgent;
+        container.appendChild(item);
+
+        const lang = document.createElement("p");
+        lang.textContent = "Browser Language: "+navigator.language;
+        container.appendChild(lang);
+
+        //window interface
+        //getting width of the browser window in pixels
+        const width = document.createElement("p");
+        width.textContent = "Window width: " + window.innerWidth;
+        container.appendChild(width);
+
+        //getting location
+        const locatin = document.createElement("p");
+        locatin.textContent = "Live Location: "+window.location;
+        container.appendChild(locatin);
+
+        //getting children
+        const children = document.createElement("p");
+        children.textContent = document.children;
+        container.appendChild(children);
+</script>
+</body>
+</html>
