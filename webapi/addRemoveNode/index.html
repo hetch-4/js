@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script>
-      const dessertList = document.getElementById("dessert");
-      const listItem = document.createElement("li");
-      listItem.textContent = "Cookies";
-      dessertList.appendChild(listItem);
-      window.alert("Hello World");
-    </script>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
 
-  <body>
-    <ul id="dessert">
+</head>
+<body>
+  <div>
+    <ul id="desserts">
       <li>Cake</li>
       <li>Pie</li>
     </ul>
-  </body>
+  </div>
+
+  <script>
+    const dessertsList = document.getElementById("desserts");
+    const listsItem = document.createElement("li");
+
+    listsItem.textContent = "Cookies";
+    dessertsList.appendChild(listsItem);
+
+    
+
+  </script>
+</body>
 </html>
