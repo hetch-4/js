@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Listener examples</h1>
+    <p id="para">MouseOver this text to remove the event listener</p>
+    <button id="btn">Change background color</button>
+
+    <script>
+        const para = document.getElementById("para");
+        const btn = document.getElementById("btn");
+        const body01 = document.querySelector("body");
+
+        let isBgColorGrey = true;
+
+        function toggleBgColor() {
+            body01.style.backgroundColor = isBgColorGrey ? "blue" : "grey";
+            isBgColorGrey = !isBgColorGrey;
+        }
+
+        btn.addEventListener("click", toggleBgColor);
+        
+        para.addEventListener("mouseover", ()=>{
+            btn.removeEventListener("click",toggleBgColor);
+        })
+    </script>
+</body>
+</html>
