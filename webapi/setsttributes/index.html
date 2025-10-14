@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="para">I am a paragraph</p>
+    
+    <div class="my-class"></div>
+    <script>
+        //add -> set attribute on a element <p>
+        const para = document.getElementById("para");
+        para.setAttribute("class","myclass");
+
+        //update attribute on <div>
+        const div1 = document.querySelector(".my-class");
+        div1.setAttribute("class", "example")
+    </script>
+</body>
+</html>
