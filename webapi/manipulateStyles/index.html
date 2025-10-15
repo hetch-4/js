@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+        .menu{
+            display: none;
+            background-color: lightgray;
+            width: 50%;
+            padding: 10px;
+        }
+        .menu.show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggle-btn">Toggle Menu</button>
+
+    <nav id="menu" class="menu">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Products</li>
+        </ul>
+    </nav>
+
+    <p id="para">This is a paragraph</p>
+    <p id="para2">Welcome to my channel</p>
+    <p id="para3">This is a a wake up call</p>
+
+    <script>
+        const para1 = document.getElementById("para");
+        para1.style.color = "red";
+
+        const para2 = document.getElementById("para2");
+        para2.classList.add("highlight");
+
+        const para3 = document.getElementById("para3");
+        //add classlist 'highlight'
+        para3.classList.add("highlight");
+        //remove a class list on event mouse over
+        para3.addEventListener("mouseover", () => para3.classList.remove("highlight"));
+
+        const menu = document.getElementById("menu");
+        const toggleBtn = document.getElementById("toggle-btn");
+        
+        toggleBtn.addEventListener("click", () => menu.classList.toggle("show"));
+        console.log(menu)
+    </script>
+</body>
+</html>
