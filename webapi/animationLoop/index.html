@@ -25,11 +25,13 @@
 </head>
 <body>
     
-    <div id="rect" class="rect">JavaScript is Amazing</div>
-    
+    <div id="container">
+        <div id="rect" class="rect">JavaScript is Amazing</div>
+        <div class="rect">Python is Amazing</div>
+    </div>
     <script>
         //
-        const rect = document.getElementById("rect");
+        const rect = document.querySelector(".rect");
 
         //starts at 0
         let position = 0;
@@ -37,13 +39,13 @@
         function update(){
             //move the rectangle to the right
             rect.style.left = position+"px";
-            position += 2;
+            position += 1.5;
 
             //reset the position when the rectangle reaches
             //the right side of the screen
             if(position>window.innerWidth){
                 //move the rect outside the left side of the screen
-                position = -rect.offsetWidth;
+                position = -rect.offsetLeft;
             }
         }
 
