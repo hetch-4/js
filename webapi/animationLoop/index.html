@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+
+        .rect{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 250px;
+            border-radius: 5px;
+            background-color: #1b1b32;
+            color: #f5f6f7;
+            font-size: 2rem;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="rect" class="rect">JavaScript is Amazing</div>
+    
+    <script>
+        //
+        const rect = document.getElementById("rect");
+
+        //starts at 0
+        let position = 0;
+
+        function update(){
+            //move the rectangle to the right
+            rect.style.left = position+"px";
+            position += 2;
+
+            //reset the position when the rectangle reaches
+            //the right side of the screen
+            if(position>window.innerWidth){
+                //move the rect outside the left side of the screen
+                position = -rect.offsetWidth;
+            }
+        }
+
+        function animate(){
+            //update the position
+            update();
+
+            //request next frame
+            requestAnimationFrame(animate);
+        }
+
+        //start the animation
+        requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
