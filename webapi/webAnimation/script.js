@@ -3,7 +3,7 @@ const playBtn = document.querySelector("#playBtn");
 const pauseBtn = document.querySelector("#pauseBtn");
 
 const animation = square.animate(
-    [{transform:"translateX(0px)"},{ transform: "translateX(500px)"}],
+    [{ transform: "translateX(0px)" }, { transform: "translateX(500px)" }],
     {
         duration: 2000,
         iteration: Infinity,
@@ -13,18 +13,19 @@ const animation = square.animate(
 );
 
 // set the onfinish property to log a message when the animation 
-animation.onfinish=()=>{
+animation.onfinish = () => {
     console.log("Animation finished!");
+
 };
 
 //play animation when the play button is clicked
-AnimationPlaybackEvent.addEventListener("click",()=>{
+playBtn.addEventListener("click", () => {
     animation.play();
     console.log("you start the animation");
 });
 
 //pause the animation on button pause
-pauseBtn.addEventListener("click", ()=>{
+pauseBtn.addEventListener("click", () => {
     animation.pause();
     console.log("You pause the animation");
 });
