@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cancel Timeout Example</h1>
+    <button id="cancelButton">Cancel Timeout</button>
+
+    <script>
+        let timeoutID = setTimeout( ()=> {
+            console.log("This will run if not canceled");
+        }, 5000);
+
+        document
+        .querySelector("#cancelButton")
+        .addEventListener("click", ()=>{
+            clearTimeout(timeoutID);
+            console.log("Time out canceled");
+        })
+    </script>
+</body>
+</html>
