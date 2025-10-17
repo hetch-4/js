@@ -15,7 +15,7 @@ const animation = square.animate(
 // set the onfinish property to log a message when the animation 
 animation.onfinish = () => {
     console.log("Animation finished!");
-
+    
 };
 
 //play animation when the play button is clicked
