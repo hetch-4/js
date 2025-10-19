@@ -4,61 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            overflow-x: hidden;
-        }
-
-        .rect{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 400px;
-            height: 250px;
-            border-radius: 5px;
-            background-color: #1b1b32;
-            color: #f5f6f7;
-            font-size: 2rem;
-            position: absolute;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-    <div id="container">
-        <div id="rect" class="rect">JavaScript is Amazing</div>
-        <div class="rect">Python is Amazing</div>
+    <div class="container">
+        <div id="rect" class="rect">div</div>
+        <span>
+            <button id="playJsBtn">Play</button>
+            <button id="pauseJsBtn">Pause</button>
+        </span>
     </div>
-    <script>
-        //
-        const rect = document.querySelector(".rect");
-
-        //starts at 0
-        let position = 0;
-
-        function update(){
-            //move the rectangle to the right
-            rect.style.left = position+"px";
-            position += 1.5;
-
-            //reset the position when the rectangle reaches
-            //the right side of the screen
-            if(position>window.innerWidth){
-                //move the rect outside the left side of the screen
-                position = -rect.offsetLeft;
-            }
-        }
-
-        function animate(){
-            //update the position
-            update();
-
-            //request next frame
-            requestAnimationFrame(animate);
-        }
-
-        //start the animation
-        requestAnimationFrame(animate);
+    <div class="container">
+        <div id="" class="">elem</div>
+    </div>
+    <script src="script.js">
     </script>
 </body>
 </html>
