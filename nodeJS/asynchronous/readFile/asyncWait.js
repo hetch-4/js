@@ -9,4 +9,6 @@ async function readFiles(){
         console.log('Error reading files:', error);
     }
 }
+
+
 readFiles();
