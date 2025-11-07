@@ -7,11 +7,21 @@
 
 </head>
 <body>
+    <p>Check the validity</p>
     <input id="id1" type="number" min="100" max="300" required>
-
-    <button onclick="myFunction()">OK</button>
-
+    <button onclick="checkValidity()">OK</button>
     <p id="demo"></p>
+
+    <p>Check range overflow</p>
+    <input id="id2" type="number" max="100" required>
+    <button onclick="checkOverFlow()">Ok</button>
+    <p id="demo2"></p>
+
+    <p>Check underflow</p>
+    <input id="id3" type="number" min="100" required>
+    <button onclick="checkUnderFlow()">Ok</button>
+    <p id="demo3"></p>
+
     <script src="script.js"></script>
 </body>
 </html>
