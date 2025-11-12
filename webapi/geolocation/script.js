@@ -17,12 +17,17 @@ function error(err){
     console.warn(`Error (${err.code}): ${err.message}`);
 }
 
+const options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge:0
+};
+
 function geolocation(){
     if(navigator.geolocation){
-        console.log(navigator.geolocation.getCurrentPosition(showPosition));
+        navigator.geolocation.getCurrentPosition(showPosition,error,options);
     }else{
-        console.log(myElement.textContent = "Geolocation is not supported by this browser.");
+        myElement.textContent = "Geolocation is not supported by this browser.";
     }
-    navigator.geolocation.clearWatch();
 }
 
