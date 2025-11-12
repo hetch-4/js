@@ -1,33 +1,21 @@
-const myElement = document.getElementById("demo");
+const x = document.getElementById("demo");
 
-const btn = document.getElementById("showBtn");
-
-btn.addEventListener("click",()=>{
-    console.log("js")
-    geolocation();
-});
+const showBtn = document.getElementById("showBtn");
 
 
-function showPosition(position){
-    myElement.textContent = "Latitude: "+ position.coords.latitude + "<br>Longitude: "+position.coords.longitude;
-    console.log("Latitude: "+ position.coords.latitude + "<br>Longitude: "+position.coords.longitude);
-}
-
-function error(err){
-    console.warn(`Error (${err.code}): ${err.message}`);
-}
-
-const options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge:0
-};
-
-function geolocation(){
+function getLocation(){
     if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(showPosition,error,options);
+        navigator.geolocation.getCurrentPosition(showPosition);
+        console.log("hello world");
     }else{
-        myElement.textContent = "Geolocation is not supported by this browser.";
+        x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 
+function showPosition(position){
+    x.innerHTML = "Latitude: "+position.coords.latitude+"<br>Longitude: "+position.coords.longitude;
+}
+
+showBtn.addEventListener("click", ()=>{
+    getLocation();
+});
