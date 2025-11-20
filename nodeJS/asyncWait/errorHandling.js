@@ -1,6 +1,6 @@
 async function fetchUserData(){
     try{
-        const response = await fetch ('https://api.example.com/users/1');
+        const response = await fetch ('');
         if(!response.ok){
             throw new Error(`HTTP error: ${response.status}`);
         }
