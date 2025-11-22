@@ -5,26 +5,24 @@ inventory.push({name: "milk", quantity: 2});
 
 //
 const findProductIndex = productName => {
-  //convert product name to lower case
-  productName = productName.toLowerCase();
-  let index = 0;
-  //loop thougt inventory to retirve index
-  for(let i=0; i<=inventory.length-1; i++){
-    //check if name matches any in inventory
-    if(inventory[i].name.toLowerCase() === productName){
-      //when found return index and break from loop
-      index = i;
-      break;
-    }else{
-      index = -1
+  let searchName = productName.toLowerCase();
+  
+  for(let i=0; i<=inventory.length; i++){
+    let productName = inventory[i]["name"].toLowerCase();
+    
+
+    if(productName === searchName){
+      return i;
     }
 
   }
-  //return value = index
-  return index;
+
+  return -1;
 }
 
-console.log(findProductIndex("MilK"));
+
+
+console.log(findProductIndex("Soda"));
 
 const addProduct = productObject => {
   let index = findProductIndex(productObject.name);
