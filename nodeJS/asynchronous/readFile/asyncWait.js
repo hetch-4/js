@@ -1,5 +1,8 @@
+//const fs = require('fs');
+
 async function readFiles(){
     try{
+        const fs = require("fs");
         console.log('1. Starting to read files...');
         const data1 = await fs.readFile('file1.txt', 'utf8');
         const data2 = await fs.readFile('file2.txt', 'utf8');
